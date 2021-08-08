@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html><head>
-	 <title>ACCESORIOS</title>
+	 <title>Accesorios</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!--ENCABEZADO-->
-  <header>
-  <div id="header" class="header__color">
-    <a href="index.html"><img class="header__logo" src="media/logoM.png"></a>
-          <h1 class="header__fuenteTitulo">ACCESORIOS</h1>
-          <nav>
-            <ul>
-              <li><a class="header__nav" href="index.html">INICIO</a></li>
-                <li><a class="header__nav" href="juegos.html">JUEGOS</a></li>
-                <li><a class="header__nav" href="accesorios.html">ACCESORIOS</a></li>
-                <li><a class="header__nav" href="consolas.html">CONSOLAS</a></li>
-                <li><a class="header__nav" href="contacto.html">CONTACTO</a></li>
-              <li><a class="header__nav" href="carrito.html">MI CARRITO <img src="media/carrito.png"class="header__img"></a></li>
-            </ul>
-          </nav>
-        </div>
-    </div>
-  </header>
+  <!--HEADER-->
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f7797d;">
+		<a class="navbar-brand" href="index.html"><img src="media/logoM.png" class="img-fluid" width="100px" height="100px"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">INICIO <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacto.html">CONTACTO</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          PRODUCTOS
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="juegos.html">JUEGOS</a>
+            <a class="dropdown-item" href="accesorios.html">ACCESORIOS</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="consolas.html">CONSOLAS</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="carrito.html">MI CARRITO</a>
+        </li>
+        
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">BUSCAR</button>
+		    </form>
+		</div>
+	  </nav>
 
   <!--PRODUCTOS/ACCESORIOS-->
 
- <h2 class="main__h2">Nuestros productos!</h2>
-      <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Buscador" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-      </form>
+ <h2 class="main__h2">NUESTROS PRODUCTOS!</h2>
+
 
       <div class="productos__Row">
 
@@ -43,14 +60,40 @@
             <img src="media/razerKraken.png" class="productos__img">
               <p class="card__p">RAZER KRAKEN</p>
               <p class="card__p">PRECIO: $15000</p>
-              <button class="card__button">Añadir al carrito</button>      
+              <button  type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">AÑADIR AL CARRITO</button>
+
+              <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <p class="modal__p">AGREGADO AL CARRITO CORRECTAMENTE</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">VER CARRITO</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">SEGUIR COMPRANDO</button>
+                      </div>
+                    </div>
+              </div>      
           </article>
         
           <article class="card">
             <img src="media/razerBlackshark.png" class="productos__img">
               <p class="card__p">RAZER BLACKSHARK</p>
               <p class="card__p">PRECIO: $25000</p>
-              <button class="card__button">Añadir al carrito</button>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">AÑADIR AL CARRITO</button>
+
+              <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <p class="modal__p">AGREGADO AL CARRITO CORRECTAMENTE</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" a href="carrito.html">VER CARRITO</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">SEGUIR COMPRANDO</button>
+                      </div>
+                    </div>
+              </div>      
           </article> 
         </div> 
     
@@ -60,14 +103,40 @@
             <img src="media/razer3.png" class="productos__img">
               <p class="card__p">RAZER ELECTRA</p>
               <p class="card__p">PRECIO: $15000 </p>
-              <button class="card__button">Añadir al carrito</button>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">AÑADIR AL CARRITO</button>
+
+              <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <p class="modal__p">AGREGADO AL CARRITO CORRECTAMENTE</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" a href="carrito.html">VER CARRITO</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">SEGUIR COMPRANDO</button>
+                      </div>
+                    </div>
+              </div>      
           </article>
     
           <article class="card">
             <img src="media/razerKrakenKitty.png" class="productos__img">
               <p class="card__p">RAZER KRAKEN KITTY</p>
               <p class="card__p">PRECIO: $18000</p>
-              <button class="card__button">Añadir al carrito</button>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">AÑADIR AL CARRITO</button>
+
+              <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="modal__p">AGREGADO AL CARRITO CORRECTAMENTE</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" a href="carrito.html">VER CARRITO</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">SEGUIR COMPRANDO</button>
+                  </div>
+                </div>
+             </div>      
           </article>
         </div> 
     
@@ -77,14 +146,40 @@
               <img src="media/razerBlue.png" class="productos__img">
                 <p class="card__p">RAZER KRAKEN PRO BLUE</p>
                 <p class="card__p">PRECIO: $19000</p>
-                <button class="card__button">Añadir al carrito</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">AÑADIR AL CARRITO</button>
+
+                  <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+                        <div class="modal-body">
+                          <p class="modal__p">AGREGADO AL CARRITO CORRECTAMENTE</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary" a href="carrito.html">VER CARRITO</button>
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">SEGUIR COMPRANDO</button>
+                        </div>
+                      </div>
+                </div>      
             </article>
             
             <article class="card">
               <img src="media/razerKrakenMP.png" class="productos__img">
                 <p class="card__p">RAZER KRAKEN PRO NEON</p>
                 <p class="card__p">PRECIO: $20000</p>
-                <button class="card__button">Añadir al carrito</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">AÑADIR AL CARRITO</button>
+
+                <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+                        <div class="modal-body">
+                          <p class="modal__p">AGREGADO AL CARRITO CORRECTAMENTE</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary" a href="carrito.html">VER CARRITO</button>
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">SEGUIR COMPRANDO</button>
+                        </div>
+                      </div>
+                </div>      
             </article>
           </div>
         </div>
@@ -180,6 +275,11 @@
     <div>
       <p>© 2021 todos los derechos reservados</p>
     </div>
+
+
+    <!--SCRIPT-->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 	
 </body>
