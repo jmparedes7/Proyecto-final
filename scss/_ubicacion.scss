@@ -1,8 +1,9 @@
 
-.ubicacion__contenedeor{
+.ubicacion__contenedor{
 	display: flex;
+	flex-wrap: wrap;
 	padding: 20px;
-
+  
 }
 
 .ubicacion__p{
